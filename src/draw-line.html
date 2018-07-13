@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas 学习</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .canvas-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .canvas {
+      border: 1px solid #aaa;
+      margin: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="canvas-wrapper">
+    <canvas id="canvas" class="canvas" width="800" height="600">
+      this is canvas dom
+    </canvas>
+  </div>
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      context.moveTo(100, 100);
+      context.lineTo(600, 600);
+      context.lineWidth = 5;
+      context.strokeStyle = 'red';
+      context.stroke();
+    }
+  </script>
+</body>
+
+</html>
